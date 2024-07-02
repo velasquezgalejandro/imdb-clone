@@ -1,15 +1,15 @@
 import React from 'react';
-import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import { Outlet } from 'react-router-dom';
 import { Footer, Header } from './layout';
 
 const OutletPage = () => {
   return (
-    <Box>
+    <Stack rowGap={2}>
       <Header />
       <Outlet />
       <Footer />
-    </Box>
+    </Stack>
   );
 };
 

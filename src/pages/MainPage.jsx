@@ -13,7 +13,7 @@ const MainPage = () => {
     <Button sx={{ width: '100%', height: '100%' }}>{name}</Button>
   );
   return (
-    <Container maxWidth={'xl'} sx={{ height: '100vh' }}>
+    <Container maxWidth={'xl'} sx={{}}>
       <Grid container sx={{ height: '100%' }}>
         <Grid xs={8} item sx={{ p: 1 }}>
           <Stack justifyContent={'center'} columnGap={2}>
