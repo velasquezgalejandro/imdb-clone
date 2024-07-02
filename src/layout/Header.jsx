@@ -20,7 +20,12 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{
+        '&.MuiPaper-root': { bgcolor: 'layout.main' },
+      }}
+    >
       <Toolbar>
         <Typography
           variant="h6"
