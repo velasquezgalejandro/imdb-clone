@@ -3,12 +3,11 @@ import ToggleButtonGroup, {
   toggleButtonGroupClasses,
 } from '@mui/material/ToggleButtonGroup';
 
-const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
+const StyledButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   [`& .${toggleButtonGroupClasses.grouped}`]: {
     margin: theme.spacing(0.5),
     border: 0,
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: '#f3f3f3',
     width: '100%',
     [`&.${toggleButtonGroupClasses.disabled}`]: {
       border: 0,
@@ -21,4 +20,4 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     },
 }));
 
-export default StyledToggleButtonGroup;
+export default StyledButtonGroup;
