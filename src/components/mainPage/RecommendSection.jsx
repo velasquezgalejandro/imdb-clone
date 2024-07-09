@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 
 import ToggleButton from '@mui/material/ToggleButton';
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import Grid from '@mui/material/Grid';
 
 import { StyledButtonGroup, Targets } from '../../utils';
 
@@ -37,6 +37,14 @@ const RecommendSection = () => {
     );
   };
 
+  const renderTargets = (name, src) => {
+    return (
+      <Grid item xs>
+        <Targets name={name} src={src} />
+      </Grid>
+    );
+  };
+
   const onChange = (_, value) => {
     setButtonValue(value);
   };
@@ -48,24 +56,24 @@ const RecommendSection = () => {
         {Buttons(2, 'dos', onChange)}
         {Buttons(3, 'tres', onChange)}
       </StyledButtonGroup>
-      <Stack
-        gap={2}
-        direction="row"
-        justifyContent={'center'}
-        sx={{
-          width: '100%',
-          flexWrap: 'wrap',
-        }}
-      >
-        <Targets name={'uno'} />
-        <Targets name={'dos'} />
-        <Targets name={'tres'} />
-        <Targets name={'cuatro'} />
-        <Targets name={'cinco'} />
-        <Targets name={'seis'} />
-        <Targets name={'siete'} />
-        <Targets name={'icho'} />
-      </Stack>
+      <Grid container rowSpacing={2}>
+        <Grid item xs={12}>
+          <Grid container columnSpacing={1}>
+            {renderTargets('uno', '/image/template.jpg')}
+            {renderTargets('dos', '/image/template.jpg')}
+            {renderTargets('tres', '/image/template.jpg')}
+            {renderTargets('cuatro', '/image/template.jpg')}
+          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container columnSpacing={1}>
+            {renderTargets('cinco', '/image/template.jpg')}
+            {renderTargets('seis', '/image/template.jpg')}
+            {renderTargets('siete', '/image/template.jpg')}
+            {renderTargets('ocho', '/image/template.jpg')}
+          </Grid>
+        </Grid>
+      </Grid>
       <Button>mas</Button>
     </Fragment>
   );
